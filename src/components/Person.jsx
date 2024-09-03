@@ -1,11 +1,16 @@
-export default function Person({day}) {
+export default function Person({day, soldout}) {
     
-    const bools = day === "kendrick";
-    const days = bools ? "fall again slowly" : day;
+    //Javascript function
+    function handleClick() {
+        console.log(day);
+    }
 
+    //Practice conditional formatting
     return (
         <li> 
-            {days}
+            {day === "kendrick" ? "fall again slowly" : day}
+            {soldout ? <p> Not Soldout </p> : <h2> Soldout </h2>}
+            <button onClick={handleClick}> Click this button </button>
         </li>
     );
 }

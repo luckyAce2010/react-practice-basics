@@ -10,7 +10,7 @@ function Hello(p) {
           <p> I live in {person.address} </p>
           <ul>
             {person.bday.map((day) => 
-              <Person key={day} day={day}/>
+              <Person key={day} day={day} soldout={person.soldout}/>
             )}
           </ul>
         </Fragment>
